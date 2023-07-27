@@ -23,7 +23,7 @@
             background: #621e01;
             color: var(--banana);
             font-family: Verdana, Geneva, Tahoma, sans-serif;
-            font-size: calc(min(max(5vw, 12pt), 24pt));
+            font-size: calc(max(4vw, 2vh));
         }
 
         header {
@@ -132,6 +132,7 @@
 
             body {
                 margin: auto;
+                font-size: calc(max(2vw, 4vh));
             }
 
             header {
@@ -162,7 +163,7 @@
                 margin: var(--item-margin) calc(2 * var(--item-padding)) var(--item-margin) var(--item-padding);
             }
 
-            @media (min-width: 800pt) {
+            @media (min-width: 900pt) {
                 :root {
                     --icon-padding: 15pt;
                     --icon-border-width: calc(min(3.75pt, 2vh));
@@ -170,12 +171,12 @@
                 }
 
                 header {
-                    margin-left: calc(((100vw - 800pt) / 2) + var(--icon-padding));
+                    margin-left: calc(((100vw - 900pt) / 2) + var(--icon-padding));
                 }
 
                 main {
-                    margin-left: calc(((100vw - 800pt) / 2) + (2 * (var(--icon-padding) + var(--icon-border-width))) + var(--header-width));
-                    margin-right: calc((100vw - 800pt) / 2);
+                    margin-left: calc(((100vw - 900pt) / 2) + (2 * (var(--icon-padding) + var(--icon-border-width))) + var(--header-width));
+                    margin-right: calc((100vw - 900pt) / 2);
                 }
             }
         }
