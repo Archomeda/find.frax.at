@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en" data-theme="night">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Frax — ref sheet</title>
+  <meta name="description" content="Reference sheet of Frax the wolf.">
+  <meta name="theme-color" content="#040a1a">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/bundle.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="ref">
+<div class="page">
+  <div class="layer layer-top" id="scatter" aria-hidden="true"></div>
+  <div class="layer layer-tracks" id="tracks" aria-hidden="true"></div>
+
+  <div class="content">
+    <div class="site-head">
+      <div class="moon-x" aria-hidden="true"><svg class="paw moon-y" viewBox="0 0 100 100"><use href="#moon"></use></svg></div>
+      <header class="wrap bar">
+        <a class="nav-link home-link" href="index.html">← Back home</a>
+        <div class="bar-end">
+          <div class="theme" role="group" aria-label="Colour theme">
+            <button class="tog" type="button" data-mode="auto">Auto</button>
+            <button class="tog" type="button" data-mode="day">Day</button>
+            <button class="tog" type="button" data-mode="night">Night</button>
+          </div>
+          <div class="theme" role="group" aria-label="Motion">
+            <button class="tog" type="button" id="calm-toggle" aria-pressed="false">Reduce motion</button>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <main id="top">
+    <section class="wrap ref-intro">
+      <h1 id="ref-title">Ref sheet</h1>
+      <p class="lead" id="ref-description"></p>
+      <div class="chips" id="ref-colors"></div>
+    </section>
+
+    <section class="wrap ref-sheet">
+      <div class="frax-card frame"><img id="ref-img" alt=""></div>
+      <a class="frax-button frax-button--warm link-btn" id="ref-open" href="assets/refsheet.png" target="_blank" rel="noopener">Open full size</a>
+    </section>
+    </main>
+
+    <footer>
+      <div class="band" aria-hidden="true"></div>
+      <div class="wrap foot"><a href="index.html">← Back home</a></div>
+    </footer>
+  </div>
+
+  <div class="layer layer-top" id="leaves" aria-hidden="true"></div>
+</div>
+
+  <script src="js/art.js"></script>
+  <script src="js/effects.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

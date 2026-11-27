@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en" data-theme="night">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Frax</title>
+  <meta name="description" content="The homepage of Frax, a vibrant yellow wolf.">
+  <meta name="theme-color" content="#040a1a">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/bundle.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+<div class="page">
+  <div class="layer layer-top" id="scatter" aria-hidden="true"></div>
+  <div class="layer layer-tracks" id="tracks" aria-hidden="true"></div>
+
+  <div class="content">
+    <div class="site-head">
+      <div class="moon-x" aria-hidden="true"><svg class="paw moon-y" viewBox="0 0 100 100"><use href="#moon"></use></svg></div>
+      <header class="wrap bar">
+        <a class="brand" href="#top">Frax</a>
+        <div class="bar-end">
+          <nav aria-label="Sections">
+            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link" href="#socials">Socials</a>
+            <a class="nav-link" href="#facts">Fun facts</a>
+            <a class="nav-link" href="#map">Map</a>
+            <a class="nav-link" href="#timeline">Timeline</a>
+          </nav>
+          <div class="theme" role="group" aria-label="Colour theme">
+            <button class="tog" type="button" data-mode="auto">Auto</button>
+            <button class="tog" type="button" data-mode="day">Day</button>
+            <button class="tog" type="button" data-mode="night">Night</button>
+          </div>
+          <div class="theme" role="group" aria-label="Motion">
+            <button class="tog" type="button" id="calm-toggle" aria-pressed="false">Reduce motion</button>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <main id="top">
+    <section id="about" class="wrap intro">
+      <div class="intro-text">
+        <h1 id="greeting">Hi, I'm Frax.</h1>
+          <div class="flags" role="img" aria-label="Dutch and English" title="Dutch · English">
+          <svg class="flag" viewBox="0 0 36 24" aria-hidden="true"><rect width="36" height="8" fill="#ae1c28"/><rect y="8" width="36" height="8" fill="#ffffff"/><rect y="16" width="36" height="8" fill="#21468b"/></svg>
+          <svg class="flag" viewBox="0 0 60 30" preserveAspectRatio="none" aria-hidden="true"><clipPath id="uk-s"><path d="M0,0 v30 h60 v-30 z"/></clipPath><clipPath id="uk-t"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath><g clip-path="url(#uk-s)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#ffffff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#uk-t)" stroke="#c8102e" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#ffffff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#c8102e" stroke-width="6"/></g></svg>
+          </div>
+        <p class="lead" id="about-text"></p>
+        <div class="actions">
+          <a class="frax-button link-btn" href="ref.html">See the ref sheet</a>
+          <a class="frax-button frax-button--warm link-btn" href="#map">Where I've been</a>
+        </div>
+        <div id="socials">
+          <div class="socials" id="social-list" role="group" aria-label="Find me"></div>
+        </div>
+      </div>
+      <div class="intro-art">
+        <div class="frax-card frame"><img id="intro-img" src="assets/intro.webp" width="866" height="1120" alt=""></div>
+      </div>
+    </section>
+
+    <section class="wrap strip" aria-label="Now">
+      <div class="frax-card">
+        <span class="frax-chip frax-chip--sky">Now</span>
+        <span class="strip-text" id="now"></span>
+        <span class="zzz" id="zzz" aria-hidden="true" hidden><span>z</span><span>z</span><span>z</span></span>
+      </div>
+    </section>
+
+    <section id="upcoming" class="wrap block" hidden>
+      <h2>Upcoming</h2>
+      <div class="upcoming" id="upcoming-list"></div>
+    </section>
+
+    <div class="band" aria-hidden="true"></div>
+
+    <section id="facts" class="wrap block facts">
+      <div class="head">
+        <h2>Fun facts</h2>
+      </div>
+      <div class="facts-grid" id="fact-list"></div>
+    </section>
+
+    <section id="map" class="wrap block">
+      <div class="head">
+        <h2>Where I&#39;ve been</h2>
+        <div class="chips">
+          <span class="frax-chip">Visited</span>
+          <span class="frax-chip frax-chip--red">City</span>
+        </div>
+      </div>
+      <div class="frax-card map-card">
+        <div id="world" role="region" aria-label="Where I&#39;ve been"></div>
+        <div class="zoom">
+          <button class="frax-button frax-button--warm zoom-btn" type="button" id="zoom-in" aria-label="Zoom in">+</button>
+          <button class="frax-button frax-button--warm zoom-btn" type="button" id="zoom-out" aria-label="Zoom out">−</button>
+          <button class="frax-button frax-button--warm zoom-btn small" type="button" id="zoom-reset" aria-label="Reset view" title="Reset view">1:1</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="timeline" class="wrap block wide-gap last">
+      <div class="head">
+        <h2>Timeline</h2>
+      </div>
+      <ol class="timeline" id="timeline-list"></ol>
+    </section>
+    </main>
+
+    <footer>
+      <div class="band" aria-hidden="true"></div>
+      <div class="wrap foot"><a href="#top">Back to top</a></div>
+    </footer>
+  </div>
+
+  <div class="layer layer-top" id="leaves" aria-hidden="true"></div>
+</div>
+
+  <script src="js/art.js"></script>
+  <script src="js/effects.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
